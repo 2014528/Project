@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="mb-4 text-center text-gradient">Carbon Footprint Calculator</h2>
+
+<!-- Two-column layout: Form on the left, Results on the right -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-box">
+            <h4 class="mb-3 text-gradient">Enter Your Usage</h4>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Electricity Usage (kWh):</label>
+                    <input type="number" name="electricity" step="any" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Gasoline Usage (liters):</label>
+                    <input type="number" name="gasoline" step="any" value="0" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Diesel Usage (liters):</label>
+                    <input type="number" name="diesel" step="any" value="0" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Car Travel Distance (miles):</label>
+                    <input type="number" name="car_miles" step="any" value="0" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Flight Distance (km):</label>
+                    <input type="number" name="flight_km" step="any" value="0" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Natural Gas Usage (therms):</label>
+                    <input type="number" name="natural_gas" step="any" value="0" class="form-control">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-gradient">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        {% if result_html %}
+        <div class="ms-md-3 mt-4 mt-md-0 bg-dark p-4 rounded result-area">
+            {{ result_html|safe }}
+        </div>
+        {% else %}
+        <div class="ms-md-3 mt-4 mt-md-0 bg-dark p-4 rounded result-area d-flex align-items-center justify-content-center"
+            style="min-height:200px;">
+            <p class="text-muted">Your results will appear here after calculation.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Tips & Tricks Section with a background image and overlay -->
+<div class="parallax-section mt-5"
+    style="background-image: url('https://assets.mofoprod.net/network/images/carbon_footprint_OG.original.png');">
+    <div class="overlay-gradient">
+        <div class="container py-5 text-center text-dark">
+            <h3 class="mb-4 text-gradient">Tips &amp; Tricks</h3>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card bg-transparent border-dark">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Public Transport</h5>
+                            <p class="card-text text-dark">Opt for buses or trains to significantly cut down on
+                                emissions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-transparent border-dark">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Energy-Efficient Appliances</h5>
+                            <p class="card-text text-dark">Switching to efficient devices reduces both costs and carbon
+                                footprint.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-transparent border-dark">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Renewable Energy</h5>
+                            <p class="card-text text-dark">Consider solar or wind power sources whenever possible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-transparent border-dark">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Monitor &amp; Adjust</h5>
+                            <p class="card-text text-dark">Track your usage regularly and make incremental improvements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Our Mission Section with background image and overlay text -->
+<div class="parallax-section mt-5"
+    style="background-image: url('https://images.ctfassets.net/bqt23vn8s835/3ZkTvNcu6WkWkCCSHqsyI6/23e4ff5c9ef5b980a5506aa2aa5e1fb9/blog-post-img.jpg?w=1440&h=513&fl=progressive&q=50&fm=jpg');">
+    <div class="overlay-dark">
+        <div class="container py-5 text-center text-light">
+            <h3 class="mb-4 text-gradient">Our Mission</h3>
+            <p class="lead">We empower individuals and organizations to understand and reduce their environmental
+                impact. By providing clear emission breakdowns and actionable insights, we inspire changes that lead to
+                a sustainable future.</p>
+            <img src="https://static.vecteezy.com/system/resources/previews/042/887/024/non_2x/set-icons-of-net-zero-and-carbon-footprint-sustainable-development-stickers-green-energy-reducing-co2-emissions-design-elements-or-labels-eco-friendly-production-environmental-safety-vector.jpg"
+                alt="Our Mission Image" class="img-fluid rounded mt-1 col-md-4">
+        </div>
+    </div>
+</div>
+
+<!-- About Section with a vibrant gradient background -->
+<div class="gradient-section mt-5 py-5 text-center text-light">
+    <div class="container">
+        <h3 class="mb-4 text-gradient">About Our Website</h3>
+        <p class="mb-4">We provide a comprehensive platform for calculating and understanding your carbon footprint. Our
+            goal is to motivate real change and encourage the adoption of eco-friendly practices across the globe.</p>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="mt-5 pt-5 pb-3 bg-dark-gradient text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <h5 class="text-gradient">Carbon Footprint Calculator</h5>
+                <p>Empowering you to make greener choices.</p>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h5 class="text-gradient">Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url_for('calculator') }}" class="footer-link">Calculator</a></li>
+                    {% if session.get('user_id') %}
+                    <li><a href="{{ url_for('logout') }}" class="footer-link">Logout</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}" class="footer-link">Login</a></li>
+                    <li><a href="{{ url_for('signup') }}" class="footer-link">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h5 class="text-gradient">Contact</h5>
+                <p>Email: abhishek@example.com<br>Address: 24-25 Street, Berlin</p>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h5 class="text-gradient">Follow Us</h5>
+                <a href="#" class="footer-social-link me-2">Twitter</a>
+                <a href="#" class="footer-social-link me-2">Facebook</a>
+                <a href="#" class="footer-social-link">Instagram</a>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+</footer>
+{% endblock content %}

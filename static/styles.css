@@ -1,0 +1,120 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1A1A1D, #2D2D34);
+    color: #ECECEC;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-dark-gradient {
+    background: linear-gradient(135deg, #111, #333);
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: 600;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #4ECDC4, #8A2BE2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-box {
+    background: #2D2D34;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #556270, #4ECDC4);
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #4ECDC4, #556270);
+    color: #fff;
+}
+
+.result-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.result-box ul li {
+    margin-bottom: 5px;
+}
+
+.alert-danger {
+    background: #8b1e1e;
+    border: none;
+}
+
+h2, h3, h4, h5 {
+    font-weight: 500;
+}
+
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+}
+.footer-link:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.footer-social-link {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.footer-social-link:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.result-area {
+    min-height: 200px;
+}
+
+hr {
+    border-color: #444;
+}
+
+/* Parallax Section */
+.parallax-section {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+/* Overlays */
+.overlay-gradient {
+    background: linear-gradient(to bottom right, rgba(78,205,196,0.5), rgba(138,43,226,0.5));
+    border-radius: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+.overlay-dark {
+    background: rgba(0,0,0,0.5);
+    
+    min-height: 100%;
+    width: 100%;
+}
+
+/* Gradient Section */
+.gradient-section {
+    background: linear-gradient(45deg, #8A2BE2, #4ECDC4);
+}
+
+/* Cards Styling */
+.card {
+    background: rgba(0,0,0,0.3);
+}
+.card-title {
+    font-weight: 600;
+}

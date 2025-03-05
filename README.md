@@ -1,5 +1,5 @@
 Carbon Footprint Monitoring Tool
-A web-based application developed using Python and Flask that helps users track and reduce their carbon footprint by calculating emissions based on various activities, such as electricity usage, gasoline consumption, travel, and more.
+A web-based application developed using Python and Flask that helps users track and reduce their carbon footprint by calculating emissions based on various activities, such as electricity usage, gasoline consumption, travel, and more.<br>
 
 Features:
 User Authentication: Sign up, log in, and maintain user sessions securely.

@@ -3,8 +3,8 @@ A web-based application developed using Python and Flask that helps users track 
 
 Features:
 User Authentication: Sign up, log in, and maintain user sessions securely.<br>
-Emissions Calculation: Users can input their daily or monthly consumption data (e.g., electricity, gasoline, travel) to calculate their carbon emissions in kilograms of CO₂ equivalent.<br>
-Personalized Recommendations: Based on the user's emissions, the tool provides personalized suggestions to help reduce their carbon footprint.<br>
+Emissions Calculation: Users can input their daily or monthly consumption data (e.g., electricity, gasoline, travel) to calculate their carbon emissions in kilograms of CO₂ equivalent.<br><br>
+Personalized Recommendations: Based on the user's emissions, the tool provides personalized suggestions to help reduce their carbon footprint.<br><br>
 Carbon Footprint Breakdown: The app provides a detailed breakdown of emissions by category, such as Electricity, Gasoline, Car Travel, Flights, and Natural Gas.<br><br>
 Technologies Used:
 Python - Backend logic and calculations<br>
